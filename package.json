@@ -1,5 +1,5 @@
 {
-  "name": "amazona",
+  "name": "gamerzone",
   "type": "module",
   "version": "1.0.0",
   "description": "Ecommerce website like amazon",
@@ -8,16 +8,7 @@
     "build": "cd frontend && npm install && npm run build",
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/basir/amazona.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/basir/amazona/issues"
-  },
-  "homepage": "https://github.com/basir/amazona#readme",
+  
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
