@@ -9,7 +9,7 @@ const data = {
             isAdmin: true,
             isSeller:true,
             seller: {
-                name: "Game Stock",
+                name: "Game Zone",
                 logo: "/images/Logos/logoSony",
                 description: "best seller",
                 rating: 5,
@@ -43,7 +43,7 @@ const data = {
             isAdmin: false,
             isSeller:true,
             seller: {
-                name: "Game Stock",
+                name: "Microsoft",
                 logo: "/images/Logos/logoXbox",
                 description: "Microsoft seller",
                 rating: 4.5,
