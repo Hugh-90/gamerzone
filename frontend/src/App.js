@@ -22,6 +22,8 @@ import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
 import SellerRoute from './screens/SellerRoute';
 import SellerScreen from './screens/SellerScreen';
+import SearchScreen from './screens/SearchScreen';
+import SearchBox from './components/SearchBox';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -40,6 +42,13 @@ function App() {
             <Link className="brand" to="/">
               Gamerzone
             </Link>
+          </div>
+          <div>
+            <Route
+              render={({ history }) => (
+                <SearchBox history={history}></SearchBox>
+              )}>
+            </Route>
           </div>
           <div>
             <Link to="/cart">
@@ -124,6 +133,7 @@ function App() {
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
           <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
+          <Route path="/search/name/:name?" component={SearchScreen} exact></Route>
           <PrivateRoute
             path="/profile"
             component={ProfileScreen}
