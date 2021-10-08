@@ -62,7 +62,11 @@ return(
                                 <td>{user.isSeller ? 'YES' : ' NO'}</td>
                                 <td>{user.isAdmin ? "YES" : "NO"}</td>
                                 <td>
-                                <button type="button" className="small">
+                                <button
+                                type="button"
+                                className="small"
+                                onClick={() => props.history.push(`/user/${user._id}/edit`)}
+                                >
                                     Edit
                                 </button>
                                 <button
