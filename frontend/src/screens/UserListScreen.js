@@ -9,8 +9,12 @@ export default function UserListScreen(props) {
     const userList = useSelector(state => state.userList);
     const {loading, error, users} = userList;
 
-    const userDelete = useSelector(state => state.userDelete);
-    const {loading: loadingDelete, error: errorDelete, success: successDelete} = userDelete;
+    const userDelete = useSelector((state) => state.userDelete);
+  const {
+    loading: loadingDelete,
+    error: errorDelete,
+    success: successDelete,
+  } = userDelete;
 
     const dispatch = useDispatch();
     useEffect(() => {
@@ -19,17 +23,18 @@ export default function UserListScreen(props) {
     }, [dispatch, successDelete]);
 
     const deleteHandler = (user) => {
-        if(window.confirm("Are you sure?")) {
-            dispatch(deleteUser(user._id));
-        }
+      if (window.confirm('Are you sure?')) {
+        dispatch(deleteUser(user._id));
+      }
     };
 
 return(
 <div>
     <h1>Users</h1>
     {loadingDelete && <LoadingBox></LoadingBox>}
-    {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
-    {successDelete && <MessageBox variant="success">User Deleted Successfully</MessageBox>}
+      {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
+      {successDelete && (
+        <MessageBox variant="success">User Deleted Successfully</MessageBox>)}
     {
         loading ? (<LoadingBox></LoadingBox>)
         :
@@ -57,11 +62,18 @@ return(
                                 <td>{user.isSeller ? 'YES' : ' NO'}</td>
                                 <td>{user.isAdmin ? "YES" : "NO"}</td>
                                 <td>
-                                    <button type="button" className="small" onClick={() => props.history.push(`/user/${user._id}/edit`)}>Edit</button>
-                                    <button type="button" className="small" onClick={()=> deleteHandler(user)}>Delete</button>
-                                </td>
-                            </tr>
-                        ))}
+                                <button type="button" className="small">
+                                    Edit
+                                </button>
+                                <button
+                                 type="button"
+                                 className="small"
+                                 onClick={() => deleteHandler(user)}>
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         )
