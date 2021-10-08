@@ -62,7 +62,7 @@ function App() {
               <i className="fa fa-bars"></i>
             </button>
             <Link className="brand" to="/">
-              Gamerzone
+              GamerZone
             </Link>
           </div>
           <div>
@@ -122,9 +122,6 @@ function App() {
                   Admin <i className="fa fa-caret-down"></i>
                 </Link>
                 <ul className="dropdown-content">
-                  <li>
-                    <Link to="/dashboard">Dashboard</Link>
-                  </li>
                   <li>
                     <Link to="/productlist">Products</Link>
                   </li>
