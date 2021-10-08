@@ -1,6 +1,7 @@
 import {
   USER_DETAILS_FAIL,
   USER_DETAILS_REQUEST,
+  USER_DETAILS_RESET,
   USER_DETAILS_SUCCESS,
   USER_LIST_FAIL,
   USER_LIST_REQUEST,
@@ -80,6 +81,8 @@ export const userListReducer = (state = {loading:true}, action) => {
       return { loading: false, users:action.payload};
     case USER_LIST_FAIL:
       return {loading: false, error: action.payload};
+    case USER_DETAILS_RESET:
+      return {loading: true};
      default:
       return state;
   }
