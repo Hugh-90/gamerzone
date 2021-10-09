@@ -2,7 +2,7 @@ import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import data from '../data.js';
 import Product from '../models/productModel.js';
-import { isAdmin, isAuth, isSellerOrAdmin } from '../utils.js';
+import { isAdmin, isAuth, isSeller, isSellerOrAdmin } from '../utils.js';
 
 const productRouter = express.Router();
 
@@ -144,7 +144,7 @@ productRouter.put(
   })
 );
 
-productRouter.delete("/:id", isAuth, isAdmin, expressAsyncHandler(async(req,res) => {
+productRouter.delete("/:id", isAuth, isSellerOrAdmin, expressAsyncHandler(async(req,res) => {
   const product = await Product.findById(req.params.id);
   if(product) {
     const deleteProduct = await product.remove();
