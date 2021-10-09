@@ -10,7 +10,7 @@ const data = {
             isSeller:true,
             seller: {
                 name: "Game Zone",
-                logo: "/images/Logos/logoSony",
+                logo: "/images/l1.jpg",
                 description: "best seller",
                 rating: 5,
                 numReviews:180,
@@ -30,7 +30,7 @@ const data = {
             isSeller:true,
             seller: {
                 name: "Nintendo",
-                logo: "/images/Logos/logoNintendo",
+                logo: "/images/l2.jpg",
                 description: "Nintendo seller",
                 rating: 4.5,
                 numReviews:160,
@@ -44,7 +44,7 @@ const data = {
             isSeller:true,
             seller: {
                 name: "Microsoft",
-                logo: "/images/Logos/logoXbox",
+                logo: "/images/l3.jpg",
                 description: "Microsoft seller",
                 rating: 4.5,
                 numReviews:120,

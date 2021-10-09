@@ -16,6 +16,7 @@ import {
   productDeleteReducer,
   productDetailsReducer,
   productListReducer,
+  productReviewCreateReducer,
   productUpdateReducer,
 } from './reducers/productReducers';
 import {
@@ -39,7 +40,7 @@ const initialState = {
     cartItems: localStorage.getItem('cartItems')
       ? JSON.parse(localStorage.getItem('cartItems'))
       : [],
-    shippingAddress: localStorage.getItem('shippingAddress')
+      shippingAddress: localStorage.getItem('shippingAddress')
       ? JSON.parse(localStorage.getItem('shippingAddress'))
       : {},
     paymentMethod: 'PayPal',
@@ -57,6 +58,7 @@ const reducer = combineReducers({
   orderMineList: orderMineListReducer,
   userDetails: userDetailsReducer,
   userUpdateProfile: userUpdateProfileReducer,
+  userUpdate: userUpdateReducer,
   productCreate: productCreateReducer,
   productUpdate: productUpdateReducer,
   productDelete: productDeleteReducer,
@@ -65,9 +67,9 @@ const reducer = combineReducers({
   orderDeliver: orderDeliverReducer,
   userList: userListReducer,
   userDelete: userDeleteReducer,
-  userUpdate: userUpdateReducer,
   userTopSellersList: userTopSellerListReducer,
   productCategoryList: productCategoryListReducer,
+  productReviewCreate: productReviewCreateReducer,
 });
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(

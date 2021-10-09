@@ -115,6 +115,7 @@ a.brand {
 }
 .fa-shopping-cart{
   color: #ffffff;
+  font-size: 2rem;
 }
 .row {
   display: flex;
