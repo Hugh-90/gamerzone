@@ -9,7 +9,7 @@ const data = {
             isAdmin: true,
             isSeller:true,
             seller: {
-                name: "Game Zone",
+                name: "Gamer Zone",
                 logo: "/images/l1.jpg",
                 description: "best seller",
                 rating: 5,
