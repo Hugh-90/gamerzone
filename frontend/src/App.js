@@ -10,6 +10,7 @@ import PrivateRoute from './components/PrivateRoute';
 import SearchBox from './components/SearchBox';
 import SellerRoute from './components/SellerRoute';
 import CartScreen from './screens/CartScreen';
+import DashboardScreen from './screens/DashboardScreen';
 import HomeScreen from './screens/HomeScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import OrderListScreen from './screens/OrderListScreen';
@@ -71,7 +72,7 @@ function App() {
             ></Route>
           </div>
           <div>
-            <i class="fa fa-shopping-cart"></i>            
+            <i className="fa fa-shopping-cart"></i>            
             <Link to="/cart">
               Cart
               {cartItems.length > 0 && (
@@ -227,6 +228,10 @@ function App() {
           <AdminRoute
             path="/user/:id/edit"
             component={UserEditScreen}
+          ></AdminRoute>
+          <AdminRoute
+            path="/dashboard"
+            component={DashboardScreen}
           ></AdminRoute>
           <SellerRoute
             path="/productlist/seller"
