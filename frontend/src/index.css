@@ -344,10 +344,17 @@ img.large {
 }
 
 /*Carousel */
+.carousel {
+  display: flex;
+  align-content: center;
+  background-color: black;
+}
+
 .carousel .slide img {
-  max-width: 30rem;
+  max-width: 40rem;
   align-content: center;
 }
+
 
 /*Pagination */
 
