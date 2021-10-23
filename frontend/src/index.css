@@ -385,13 +385,17 @@ img.large {
 .summary-title {
   font-size: 2rem;
   padding: 1rem;
+  pointer-events: none
 }
 
 .summary-body {
   font-size: 4rem;
   padding: 1rem;
-  text-align: center;
+  text-align: center; 
 }
+
+svg > g:last-child > g:last-child { pointer-events: none }
+div.google-visualization-tooltip { pointer-events: none }
 
 .summary-title.color1{
   background-color: #f0e0e0;
